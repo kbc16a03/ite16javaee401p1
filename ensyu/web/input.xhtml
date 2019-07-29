@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>血圧管理</title>
+        <h:outputStylesheet library="css" name="input.css"/>
+    </h:head>
+    <h:body>
+        <h1>血圧管理</h1>
+        <h:form>
+            <h:panelGrid columns="3">
+                最高血圧：<h:inputText id="high" required="true" requiredMessage="最高血圧を入力してください" value="#{input.high}" />
+                <h:message for="high" errorClass="error" />
+                最低血圧：<h:inputText id="low" required="true" requiredMessage="最低血圧を入力してください" value="#{input.low}" />
+                <h:message for="low" errorClass="error" />
+                心拍数：<h:inputText id="heart" required="true" requiredMessage="心拍数を入力してください" value="#{input.heart}" />
+                <h:message for="heart" errorClass="error" />
+                時刻：<h:inputText id="tm" required="true" requiredMessage="時刻を入力してください" p:type="time" value="#{input.tm}" />
+                <h:message for="tm" errorClass="error" />
+                いつ：
+                <h:selectOneMenu value="#{input.status}" styleClass="sel">
+                    <f:selectItems value="#{input.items}" />
+                </h:selectOneMenu>
+                
+                <!-- 時刻：<h:inputText value="" >
+                    <f:convertDateTime pattern="yyyy/M/d hh:mm" timeZone="Asia/Tokyo" />
+                </h:inputText> -->
+            </h:panelGrid>
+            <h:commandButton class="submit" value="送信" action="#{input.next()}" />
+            
+            <h:button class="list" value="一覧" outcome="list"></h:button>
+            <h:link class="logout" outcome="index">[ログアウト]</h:link>
+        </h:form>
+    </h:body>
+</html>

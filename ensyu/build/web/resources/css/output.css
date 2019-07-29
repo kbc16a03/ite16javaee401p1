@@ -1,0 +1,22 @@
+body {
+    font-family: メイリオ　,Osaka;
+    font-size: 12pt;
+    margin: 10px 10px 10px 20px;
+    line-height: 1.4em;
+}
+.hd1 {
+    font-size: 1.2em;
+    text-align: center;
+}
+.hd2 {
+    font-weight: bold;
+    text-align: center;
+}
+.c1 {
+    width: 150px;
+    text-align: left;
+}
+.c2 {
+    width: 150px;
+    text-align: left;
+}

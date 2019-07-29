@@ -1,0 +1,19 @@
+body {
+    font-family: メイリオ　,Osaka;
+    font-size: 15pt;
+    margin: 40px 10px 10px 30px;
+    line-height: 1.4em;
+}
+.submit {
+    width: 70px;
+    margin-top: 10px;
+}
+.list {
+    width: 70px;
+    display: block;
+    margin-top: 20px;
+}
+.logout {
+    display: block;
+    margin-top: 20px;
+}

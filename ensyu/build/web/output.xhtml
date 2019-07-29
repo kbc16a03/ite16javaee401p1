@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>血圧管理</title>
+        <h:outputStylesheet library="css" name="output.css"/>
+    </h:head>
+    <h:body>
+        <h1>血圧管理</h1>
+        <h:form>
+            <h:panelGrid columns="2" cellspacing="0" border="1" rules="all" headerClass="hd1" rowClasses="row" columnClasses="c1, c2">
+                <f:facet name="header">出力</f:facet>
+                最高血圧<h:outputText value="#{input.high}" />
+                最低血圧<h:outputText value="#{input.low}" />
+                心拍数<h:outputText value="#{input.heart}" />
+                時刻<h:outputText value="#{input.tm}" />
+                いつ<h:outputText value="#{input.status}" />
+            </h:panelGrid>
+            <h:link outcome="input" style="display:block; margin-top:10px;">[戻る]</h:link>
+        </h:form>
+    </h:body>
+</html>
+

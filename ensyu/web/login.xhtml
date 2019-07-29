@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>ログイン</h1>
+        <h:form>
+            <h:panelGrid columns="4">
+                ユーザ名：<h:inputText id="username" required="true" requiredMessage="ユーザ名を入力してください" value="#{login.username}" />越智
+                <h:message for="username" errorClass="error" />
+                パスワード：<h:inputSecret id="password" required="true" requiredMessage="パスワードを入力してください" value="#{login.password}" />ju78iklo
+                <h:message for="password" errorClass="error" />
+            </h:panelGrid>
+            <h:commandButton value="ログイン" action="#{login.login()}" />
+            
+            <h:link outcome="index" style="display:block; margin-top:10px;">[戻る]</h:link>
+        </h:form>
+    </h:body>
+</html>
+

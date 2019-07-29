@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>一覧</title>
+        <h:outputStylesheet library="css" name="list.css"/>
+    </h:head>
+    <h:body>
+        <h:dataTable value="#{input.all}" var="item" headerClass="hd1" rowClasses="odd, even" columnClasses="c1,c2,c3,c4,c5">
+            <f:facet name="header">一覧</f:facet>
+            <h:column headerClass="hd2">
+                <f:facet name="header">最高血圧</f:facet>
+                #{item.high}
+            </h:column>
+            <h:column headerClass="hd2">
+                <f:facet name="header">最低血圧</f:facet>
+                #{item.low}
+            </h:column>
+            <h:column headerClass="hd2">
+                <f:facet name="header">心拍数</f:facet>
+                #{item.heart}
+            </h:column>
+            <h:column headerClass="hd2">
+                <f:facet name="header">時刻</f:facet>
+                #{item.tm}
+            </h:column>
+            <h:column headerClass="hd2">
+                <f:facet name="header">いつ</f:facet>
+                #{item.status}
+            </h:column>
+        </h:dataTable>
+        <h:link outcome="input" style="display:block; margin-top:10px;">[戻る]</h:link>
+    </h:body>
+</html>
+
